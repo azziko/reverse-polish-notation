@@ -1,0 +1,125 @@
+/* default */
+:root {
+    --bright-color: #E8E9ED;
+    --gray-color: #85939E;
+    --deep-gray-color: #586875;
+    --dark-gray-color: #222E3B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* establishing fonts */
+@font-face {
+    font-family: "Digital";
+    src: url('../fonts/digital-7/digital-7.ttf') format('truetype');
+    font-weight: 300 800;
+    font-style: normal;
+}
+
+ul li{
+    list-style: none;
+}
+
+input, ::placeholder {
+    border: none;
+    background-color: transparent;
+    color: var(--bright-color);
+}
+
+/* wrappers */
+._wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.calc_wrapper {
+    background-color: var(--bright-color);
+    width: 40vw;
+    min-width: 300px;
+    height: 70vh;
+    padding: 1em;
+    border-radius: 5%;
+    box-shadow: inset -0.3vw -0.2vw 0.6vw 0vw black;
+}
+
+/* form */
+.calc {
+    height: 100%;
+}
+
+.display {
+    background-color: var(--dark-gray-color);
+    margin: 1%;
+}
+
+#display, input::placeholder {
+    font-family: Digital;
+    text-align: right;
+    width: 100%;
+    height: 10vh;
+    font-size: calc(16px + (100vw - 100px)/25);
+    outline: none;
+    cursor: default;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1%;
+}
+
+.buttons .line {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-basis: 16%;
+    gap: 4%;
+}
+
+.buttons li{
+    background-color: var(--gray-color);
+    border-radius: 30%;
+    width: 22%;
+    box-shadow: inset -0.3vw -0.2vw 0.5vw -0.05vw black;
+}
+
+.buttons li:active {
+    box-shadow: inset 0.3vw 0.2vw 0.5vw -0.05vw black;
+    transition: 0.1s;
+    padding: 0.3vw 0px 0px 0.2vw;
+    box-sizing: border-box;  
+}
+
+.buttons li.operator {
+    background-color: var(--deep-gray-color);
+}
+
+.buttons input {
+    width: 100%;
+    height: 100%;
+    font-size: calc(16px + (100vw - 100px)/60);
+}
+
+/* media(making it look more appealing for h>w screens */
+@media (orientation: portrait) {
+    .calc_wrapper {
+        height: 50vh!important;
+        width: 55vw!important;
+    }
+
+    .buttons .line {
+        flex-basis: 15%;
+    }
+}
