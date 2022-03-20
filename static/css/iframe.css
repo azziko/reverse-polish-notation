@@ -1,0 +1,32 @@
+/*160x240 to 320x480*/
+@media screen 
+and (min-width: 160px) 
+and (min-height: 240px)
+and (max-width: 320px) 
+and (max-height: 480px),
+/*Quadratic resolution*/ 
+(aspect-ratio: 1/1)
+{
+    .calc_wrapper {
+        height: 95vh!important;
+        width: 95vw!important;
+        min-width: 0;
+        padding: 2.5vw;
+    }
+
+    .buttons {
+        margin-top: 0.5em;
+    }
+
+    .buttons input, #display, input::placeholder{
+        font-size: calc(16px + (100vw - 100px)/15);
+    }
+
+    #display, input::placeholder {
+        height: 14vh;
+    }
+
+    .buttons li {
+        width: 30vw;
+    }
+}
