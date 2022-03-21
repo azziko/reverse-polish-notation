@@ -17,6 +17,15 @@ html, body {
     overflow: hidden;
 }
 
+.me {
+    position: absolute;
+    color: var(--dark-gray-color);
+    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 2vw;
+    left: 2vw;
+}
+
 /* establishing fonts */
 @font-face {
     font-family: "Digital";

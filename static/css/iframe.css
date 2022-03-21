@@ -7,6 +7,11 @@ and (max-height: 480px),
 /*Quadratic resolution*/ 
 (aspect-ratio: 1/1)
 {
+    .me {
+        display: none!important;
+        visibility: hidden;
+    }
+    
     .calc_wrapper {
         height: 95vh!important;
         width: 95vw!important;
