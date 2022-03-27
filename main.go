@@ -54,5 +54,5 @@ func (w wrapper) Open(path string) (http.File, error) {
 			return nil, err
 		}
 	}
-	return f, err
+	return f, nil
 }
