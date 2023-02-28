@@ -1,2 +1,3 @@
-# widget-calculator
-Simple iframeable widget calculator 
+# RPN
+Reverse polish notation implemented for basic math operators + visual
+ template
